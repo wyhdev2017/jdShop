@@ -1,0 +1,104 @@
+.clearfix:after {
+	/*清除浮动*/
+	content: ".";
+	display: block;
+	height: 0;
+	visibility: hidden;
+	clear: both;
+}
+
+.clearfix {
+	*zoom: 1;
+	/* |  *代表只有ie6 7能识别的特殊符号 只有ie 6 7执行. zoom 清除浮动的放*/
+}
+/*弹出层遮罩*/
+.mu-overlay {
+	background-color: #fff;
+}
+
+
+/*引入自定义的字体图标*/
+
+@font-face {
+	font-family: bilibiliFont;
+	font-weight: normal;
+	font-style: normal;
+	src: url('../../static/fonts/iconfont.ttf') format('truetype');
+}
+
+.bili-icon {
+	font-family: bilibiliFont;
+	font-size: 2.4rem;
+	font-weight: normal;
+	font-style: normal;
+	line-height: 1;
+	display: inline-block;
+	text-decoration: none;
+	-webkit-font-smoothing: antialiased;
+}
+
+.icon-home:before {
+	content: "\e639";
+}
+
+.icon-partition:before {
+	content: "\e624";
+	color: #868686;
+}
+
+.icon-dynamic:before {
+	content: "\e617";
+}
+
+.icon-message:before {
+	content: "\e846";
+}
+
+.icon-photo:before {
+	content: "\e61a";
+}
+
+.icon-menu:before {
+	content: "\e64a";
+	color: #fff;
+}
+
+.icon-history:before {
+	content: "\e6b9";
+}
+
+.icon-offline:before {
+	content: "\e600";
+}
+
+.icon-collection:before {
+	content: "\e6d3";
+}
+
+.icon-concern:before {
+	content: "\e65d";
+}
+
+.icon-rest:before {
+	content: "\e6c0";
+}
+
+.icon-live:before {
+	content: "\e626";
+}
+
+.icon-member:before {
+	content: "\e6c3";
+}
+
+.icon-free:before {
+	content: "\e6bd";
+}
+
+.icon-list:before {
+	content: "\e61f";
+}
+
+.icon-customer-service:before {
+	content: "\e62a";
+}
