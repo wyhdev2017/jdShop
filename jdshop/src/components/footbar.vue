@@ -14,7 +14,7 @@
   export default {
     data () {
       return {
-        bottomNav: 'recents'
+        bottomNav: 'home'
       }
     },
     methods: {

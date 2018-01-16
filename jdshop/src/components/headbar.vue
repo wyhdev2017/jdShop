@@ -1,65 +1,14 @@
 <template>
 	<div>
-		<div class="bili-head">
-			<span class="bili-icon icon-menu menu" @click="toggle(true)"></span>
-			<div class="photo">
-				<img src="../../static/bililogo.png" />
-			</div>
-		</div>
-		<mu-drawer :open="open" :docked="docked">
-			<!--头部-->
-			<div class="dc-header">
-				<div class="iconhead">
-					<img src="../../static/bililogo.png" />
-				</div>
-				<span id="login">
-					点击头像登录
-				</span>
-			</div>
-			<!--中间部分-->
-			<mu-list @itemClick="sitemClick" :value="itemSelected" class="dc-body">
-				<mu-list-item title="首页" value="home">
-					<mu-icon slot="left" value=":bili-icon icon-home" />
-				</mu-list-item>
-				<mu-list-item title="历史记录" value="history">
-					<mu-icon slot="left" value=":bili-icon icon-history" />
-				</mu-list-item>
-				<mu-list-item title="离线缓存" value="offline">
-					<mu-icon slot="left" value=":bili-icon icon-offline" />
-				</mu-list-item>
-				<mu-list-item title="我的收藏" value="collection">
-					<mu-icon slot="left" value=":bili-icon icon-collection" />
-				</mu-list-item>
-				<mu-list-item title="我的关注" value="concern">
-					<mu-icon slot="left" value=":bili-icon icon-concern" />
-				</mu-list-item>
-				<mu-list-item title="稍后再看" value="rest">
-					<mu-icon slot="left" value=":bili-icon icon-rest" />
-				</mu-list-item>
-				<mu-divider />
-				<mu-list-item title="直播中心" value="live">
-					<mu-icon slot="left" value=":bili-icon icon-live" />
-				</mu-list-item>
-				<mu-list-item title="我的大会员" value="member">
-					<mu-icon slot="left" value=":bili-icon icon-member" />
-				</mu-list-item>
-				<mu-list-item title="免流量服务" value="free">
-					<mu-icon slot="left" value=":bili-icon icon-free" />
-				</mu-list-item>
-				<mu-list-item title="会员订购单" value="list">
-					<mu-icon slot="left" value=":bili-icon icon-list" />
-				</mu-list-item>
-				<mu-list-item title="联系客服" value="customer-service">
-					<mu-icon slot="left" value=":bili-icon icon-customer-service" />
-				</mu-list-item>
-				<mu-divider />
-				<!--	<mu-list-item v-if="docked" @click.native="open = false" title="Close" />-->
-			</mu-list>
-			<!--顶部操作栏-->
-			<!--<div class="dc-footer">
-
-			</div>-->
-		</mu-drawer>
+		<!--头部搜索-->
+		<header class="sn_search">
+			<a href="#" class="icon_category"></a>
+			<form action="#">
+				<span class="icon_search"></span>
+				<input type="search" placeholder="60寸电视免费拿" />
+			</form>
+			<a href="#" class="icon_cart"></a>
+		</header>
 	</div>
 </template>
 
@@ -67,110 +16,63 @@
 	export default {
 		data() {
 			return {
-				itemSelected: "",
-				open: false,
-				docked: true
+
 			}
 		},
 		methods: {
-			toggle(flag) {
-				this.open = true
-			},
-			sitemClick(e) {
-				this.itemSelected = e.value;
-				this.open = false
-			}
-		},
-		components: {}
+
+		}
 	}
 </script>
+
 <style scoped="scoped" lang="less">
-	@import url("../common/styles/variable.less");
-	@import url("../common/styles/mixin.less");
-	.bili-head {
-		position: fixed;
-		width: 100%;
-		height: 5rem;
-		background-color: @bilibgc;
-		top: 0;
-		left: 0;
-		.menu {
-			position: absolute;
-			left: -1rem;
-			font-size: 3rem;
-			top: 1rem;
-		}
-		.photo {
-			position: absolute;
-			left: 2.5rem;
-			font-size: 3rem;
-			top: 0.5rem;
-			width: 4rem;
-			height: 4rem;
-			border: 1px solid #fff;
-			border-radius: 50%;
-			overflow: hidden;
-			img {
-				width: 4rem;
-				height: 4rem;
-			}
-		}
-	}
+	@import url("../common/less/variables.less");
+	/*头部搜索*/
 	
-	.mu-drawer {
-		width: 20rem;
-		padding: 7rem 0 3rem 0;
+	.sn_search {
+		width: 100%;
+		height: 90/@bs;
+		background: @snColor;
 		position: fixed;
-		overflow: hidden;
-		.dc-header {
-			background-color: hotpink;
-			height: 7rem;
-			position: fixed;
-			top: 0;
-			left: 0;
-			width: 100%;
-			z-index: 2;
-			.iconhead {
-				position: absolute;
-				left: 2.5rem;
-				font-size: 3rem;
-				top: 0.5rem;
-				width: 4rem;
-				height: 4rem;
-				border: 1px solid #fff;
-				border-radius: 50%;
-				overflow: hidden;
-				img {
-					width: 4rem;
-					height: 4rem;
-				}
-			}
-			#login {
-				color: #fff;
-				position: absolute;
-				left: 1.7rem;
-				bottom: 0.8rem;
-				font-size: 12px;
-			}
-		}
-		.dc-body {
-			z-index: 1;
-			height: 100%;
-			overflow-y: auto;
-			width: 100%;
+		left: 0;
+		top: 0;
+		z-index: 999;
+		a {
+			width: 90/@bs;
+			height: 90/@bs;
 			position: absolute;
-			top: 7rem;
-			left: 0rem;
-			border: 1px solid #868686;
+			top: 0;
+			&.icon_category {
+				left: 0;
+				background: url("../common/images/icon_category.png") no-repeat center / 44/@bs 70/@bs;
+			}
+			&.icon_cart {
+				right: 0;
+				background: url("../common/images/icon_cart.png") no-repeat center / 63/@bs 68/@bs ;
+			}
 		}
-		.dc-footer {
-			background-color: skyblue;
-			height: 3rem;
-			position: fixed;
-			bottom: 0;
-			left: 0;
+		form {
 			width: 100%;
-			z-index: 2;
+			padding: 0 90/@bs;
+			.icon_search {
+				width: 30/@bs;
+				height: 30/@bs;
+				position: absolute;
+				left: 100/@bs;
+				top: 30/@bs;
+				background: url("../common/images/icon_search.png") no-repeat center / 27/@bs 28/@bs;
+			}
+			input {
+				width: 100%;
+				height: 60/@bs;
+				margin-top: 15/@bs;
+				border: none;
+				background: rgba(255, 255, 255, 0.6);
+				border-radius: 6/@bs;
+				font-size: 24/@bs;
+				outline: none;
+				padding-left: 50/@bs;
+			}
 		}
 	}
 </style>

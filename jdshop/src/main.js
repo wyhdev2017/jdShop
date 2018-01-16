@@ -19,9 +19,10 @@ import 'muse-ui/dist/muse-ui.css'
 Vue.use(MuseUI)
 /**使用muse-ui结束*/
 // rem初始化
-import 'common/reset'
+//import 'common/reset'
 // 引入通用样式
-import 'common/styles/index.less'
+//import 'common/styles/index.less'
+import 'common/less/main.less'
 // 头部进度条插件->用于切换页面时候
 import NProgress from 'nprogress'
 import 'nprogress/nprogress.css'

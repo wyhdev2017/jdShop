@@ -30,14 +30,14 @@ body{
 
 //model css
 //主体容器
-.sn_layout{
-  width: 100%;
-  max-width: 750px;
-  min-width: 320px;
-  margin: 0 auto;
-  padding-top: 90/@bs;
-  padding-bottom: 100/@bs;
-}
+//.sn_layout{
+//width: 100%;
+//max-width: 750px;
+//min-width: 320px;
+//margin: 0 auto;
+//padding-top: 90/@bs;
+//padding-bottom: 100/@bs;
+//}
 
 //头部搜索
 .sn_search{
@@ -87,110 +87,6 @@ body{
   }
 }
 
-//轮播图
-.sn_banner{
-  width: 100%;
-  position: relative;
-  overflow: hidden;
-  ul{
-    list-style: none;
-    transform: translateX(-100%/10);
-    -webkit-transform: translateX(-100%/10);
-    &:first-child{
-      width: 10*100%;
-      li{
-        width: 100%/10;
-        float: left;
-        a{
-          display: block;
-          width: 100%;
-          img{
-            display: block;
-            width: 100%;
-          }
-        }
-      }
-    }
-    &:last-child{
-      position: absolute;
-      right: 20/@bs;
-      bottom: 20/@bs;
-      li{
-        width: 12/@bs;
-        height: 12/@bs;
-        margin-left: 12/@bs;
-        border-radius: 50%;
-        background: #fff;
-        float: left;
-        &.now{
-          background: @snColor;
-        }
-      }
-    }
-  }
-}
 
-/*导航栏*/
-.sn_nav{
-  width: 100%;
-  ul{
-    width: 100%;
-    list-style: none;
-    padding: 20/@bs 0;
-    li{
-      width: 20%;
-      float: left;
-      a{
-        display: block;
-        width: 100%;
-        text-decoration: none;
-        img{
-          display: block;
-          width: 80/@bs;
-          height: 80/@bs;
-          margin: 0 auto;
-        }
-        p{
-          font-size: 24/@bs;
-          padding: 12/@bs 0;
-          text-align: center;
-          color: #666;
-        }
-      }
-    }
-  }
-}
-
-//底部页签
-.sn_tabs{
-  width: 100%;
-  height: 100/@bs;
-  background: #fff;
-  border-top: 1px solid #ccc;
-  position: fixed;
-  left: 0;
-  bottom: 0;
-  ul{
-    width: 100%;
-    list-style: none;
-    li{
-      width: 20%;
-      float: left;
-      text-align: center;
-      a{
-        text-decoration: none;
-        span{
-          font-size: 40/@bs;
-          color: #333;
-          margin-top: 10/@bs;
-        }
-        p{
-          color: #666;
-          font-size: 24/@bs;
-        }
-      }
-    }
-  }
-}
 
 
