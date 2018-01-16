@@ -44,67 +44,21 @@
 }
 
 .icon-home:before {
-	content: "\e639";
+	content: "\e619";
 }
 
-.icon-partition:before {
-	content: "\e624";
-	color: #868686;
+.icon-category:before {
+	content: "\e609";
 }
 
-.icon-dynamic:before {
-	content: "\e617";
+.icon-discover:before {
+	content: "\e67e";
 }
 
-.icon-message:before {
-	content: "\e846";
+.icon-shoppingcart:before {
+	content: "\e607";
 }
 
-.icon-photo:before {
-	content: "\e61a";
-}
-
-.icon-menu:before {
+.icon-mine:before {
 	content: "\e64a";
-	color: #fff;
-}
-
-.icon-history:before {
-	content: "\e6b9";
-}
-
-.icon-offline:before {
-	content: "\e600";
-}
-
-.icon-collection:before {
-	content: "\e6d3";
-}
-
-.icon-concern:before {
-	content: "\e65d";
-}
-
-.icon-rest:before {
-	content: "\e6c0";
-}
-
-.icon-live:before {
-	content: "\e626";
-}
-
-.icon-member:before {
-	content: "\e6c3";
-}
-
-.icon-free:before {
-	content: "\e6bd";
-}
-
-.icon-list:before {
-	content: "\e61f";
-}
-
-.icon-customer-service:before {
-	content: "\e62a";
 }

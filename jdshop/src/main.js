@@ -47,7 +47,7 @@ Axios.interceptors.response.use(function (config) {
   //获取到config中的data，进行加工
   return config;
 });
-// 导航钩子控制tabBar的显示隐藏
+// 导航钩子控制headerBarShow的显示隐藏
 router.beforeEach((to, from, next) => {
   NProgress.start()
 if (to.path === '/' || to.path === '/home') {
