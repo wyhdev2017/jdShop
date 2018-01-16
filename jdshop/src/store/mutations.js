@@ -2,8 +2,8 @@ export default {
 	AddCarmum(state,data){
 		state.count=state.count+data;
 	},
-	ReduceCarNum(state){
-		state.count--;
+	changeTopShow(state,data){
+		state.topShow=data;
 	},
 	
 	/*************************结束***/

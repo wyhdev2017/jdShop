@@ -26,10 +26,11 @@
 		},
 		mounted() {
 			this.scroller = this.$el
+			
 		},
 		methods: {
 			loadMore() {
-				console.log("s")
+				//console.log("s")
 				this.loading = true
 				setTimeout(() => {
 					for(let i = this.num; i < this.num + 10; i++) {
@@ -38,8 +39,10 @@
 					this.num += 10
 					this.loading = false
 				}, 2000)
-			}
-		}
+			},
+			
+
+		},
 	}
 </script>
 

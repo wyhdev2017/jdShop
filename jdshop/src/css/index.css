@@ -15,7 +15,13 @@
 .mu-overlay {
 	background-color: #fff;
 }
-
+/*底部字体大小*/
+.mu-bottom-item-active .mu-bottom-item-text{
+	font-size: 0.14rem;
+}
+.mu-bottom-item-text{
+	font-size: 0.12rem;
+}
 
 /*引入自定义的字体图标*/
 

@@ -1,7 +1,7 @@
 <template>
 	<div>
 		<!--头部搜索-->
-		<header class="sn_search">
+		<header :class="topShow==true?'sn_search topShow':'sn_search'">
 			<a href="#" class="icon_category"></a>
 			<form action="#">
 				<span class="icon_search"></span>
@@ -13,14 +13,23 @@
 </template>
 
 <script>
+	import { mapState,mapActions,mapGetters} from 'vuex';
 	export default {
 		data() {
 			return {
 
 			}
 		},
-		methods: {
-
+		methods:{
+			...mapActions(['addCarmum','reduceCarNum']),
+			addCarmums( ){
+				console.log();
+				this.$store.dispatch('addCarmum')
+			}
+		},
+		computed:{
+			...mapState(["topShow"]),
+			...mapGetters(["gettersCount"])
 		}
 	}
 </script>
@@ -74,5 +83,8 @@
 				padding-left: 50/@bs;
 			}
 		}
+	}
+	.topShow{
+		background-color: rgba(250, 188, 9, 0.2);
 	}
 </style>

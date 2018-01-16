@@ -1,7 +1,7 @@
 <template>
-	<div class="sn_layout">
-		<header-bar class="ahead"></header-bar>
-		<router-view class="abody"></router-view>
+	<div class="sn_layout" @mousewheel="scrollToTop">
+		<header-bar class="ahead" v-show='headerBarShow'></header-bar>
+		<router-view class="abody" id="myData"></router-view>
 		<footer-bar class="aft"></footer-bar>
 	</div>
 </template>
@@ -9,6 +9,7 @@
 <script>
 	import FooterBar from 'components/footbar'
 	import HeaderBar from 'components/headbar.vue'
+	import { mapState, mapActions, mapGetters } from 'vuex';
 	export default {
 		data() {
 			return {}
@@ -16,6 +17,23 @@
 		components: {
 			FooterBar,
 			HeaderBar
+		},
+		methods: {
+			...mapActions(['changeTopShow', 'reduceCarNum']),
+			scrollToTop(e) {
+				let curHeight = document.documentElement.scrollTop || document.body.scrollTop;
+				var offsetTop = document.querySelector('.abody').offsetTop
+				if(curHeight > offsetTop) {
+					this.$store.dispatch('changeTopShow', true)
+				} else {
+					this.$store.dispatch('changeTopShow', false)
+				}
+			}
+		},
+		computed: {
+			...mapState(["topShow","headerBarShow"]),
+			...mapGetters(["gettersCount"])
+
 		}
 
 	}

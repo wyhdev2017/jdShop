@@ -22,6 +22,8 @@ export default {
   // 保存tabBar中cart标签的位置
   cartPos: {},
   /*************************/
-  count:0,
+  topShow:false,
+	//顶部栏是否显示
+  headerBarShow:true,
   name:{id:'1',says:"这多喝的赫尔的"}
 }

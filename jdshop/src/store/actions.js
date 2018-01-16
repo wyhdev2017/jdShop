@@ -6,8 +6,8 @@ export default {
 	addCarmum({commit},num=2){
 		commit("AddCarmum",num)
 	},
-	reduceCarNum({commit}){
-		commit("ReduceCarNum")
+	changeTopShow({commit},flag){
+		commit("changeTopShow",flag)
 	},
 	/*******************************************************结束**/
   // 设置bannar

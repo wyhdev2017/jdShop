@@ -50,11 +50,11 @@ Axios.interceptors.response.use(function (config) {
 // 导航钩子控制tabBar的显示隐藏
 router.beforeEach((to, from, next) => {
   NProgress.start()
-//if (to.path === '/' || to.path === '/category' || to.path === '/cart' || to.path === '/mine') {
-//  store.state.tabBarShow = true
-//} else {
-//  store.state.tabBarShow = false
-//}
+if (to.path === '/' || to.path === '/home') {
+    store.state.headerBarShow = true
+} else {
+    store.state.headerBarShow = false
+}
   next()
 })
 router.afterEach((to, from) => {
