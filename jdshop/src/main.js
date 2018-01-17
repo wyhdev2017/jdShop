@@ -50,7 +50,7 @@ Axios.interceptors.response.use(function (config) {
 // 导航钩子控制headerBarShow的显示隐藏
 router.beforeEach((to, from, next) => {
   NProgress.start()
-if (to.path === '/' || to.path === '/home') {
+if (to.path === '/' || to.path === '/home'|| to.path.indexOf('/category') != -1) {
     store.state.headerBarShow = true
 } else {
     store.state.headerBarShow = false
@@ -66,8 +66,11 @@ import Moment from 'moment';
 Vue.filter('convertDate', function (value) {
   return Moment(value).format('YYYY-MM-DD');
 });
-
-
+//vue-awesome-swiper
+import VueAwesomeSwiper from 'vue-awesome-swiper'
+// require styles
+import 'swiper/dist/css/swiper.css'
+Vue.use(VueAwesomeSwiper)
 //图片懒加载
 import VueLazyLoad from 'vue-lazyload'
 Vue.use(VueLazyLoad, {
