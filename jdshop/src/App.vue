@@ -58,6 +58,9 @@
 		}
 		.abody {
 			width: 100%;
+			margin: 0;
+			padding: 0;
+			background-color: #795DA3;
 			/*height: 100%;
 			min-height: 46rem;*/
 			/*background-color: hotpink;*/
@@ -69,6 +72,7 @@
 			position: fixed;
 			bottom: 0;
 			left: 0;
+			z-index: 10;
 		}
 	}
 	/*https://m.jd.com/index/recommend.action?_format_=json&page=1*/

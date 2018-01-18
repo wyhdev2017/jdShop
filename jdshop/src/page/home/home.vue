@@ -47,8 +47,66 @@
 				</ul>
 			</nav>
 		</div>
-
-		<news class="scroll-news clearfix"></news>
+		<!--滚动新闻-->
+		<div class="scroll-news clearfix">
+			<news></news>
+		</div>
+		<!--每日福利-->
+		<div class="days-J clearfix">
+			<a href="#"><img src="../../assets/5a4c3e44Ncb613ea0.png" alt="" /></a>
+		</div>
+		<div class="tit-img clearfix">
+			<img src="../../assets/58b64705Nce641d00.jpg" />
+		</div>
+		<div class="real-show f_left">
+			<div class="graphic-text">
+				<strong>玩3C</strong>
+				<p class="graphic-wz" style="color:#FF5959">iPhone 8 4899元限量抢！</p>
+			</div>
+			<div class="graphic-img"><img src="../../assets/5a163dd1Ne09fad4b.jpg" alt="" /><img src="../../assets/5a5d5605Nee8075e6.jpg" alt="" /></div>
+			<span class="graphic-btn">
+				抢6期免息券
+				<i></i>
+			</span>
+		</div>
+		<div class="real-show f_left">
+			<div class="graphic-text">
+				<strong>京东家电</strong>
+				<p class="graphic-wz" style="color:#FF5959">iPhone 8 4899元限量抢！</p>
+			</div>
+			<div class="graphic-img"><img src="../../assets/5a163dd1Ne09fad4b.jpg" alt="" /><img src="../../assets/5a5d5605Nee8075e6.jpg" alt="" /></div>
+			<!--<span class="graphic-btn">
+				抢6期免息券
+				<i></i>
+			</span>-->
+		</div>
+		<div class="real-show f_left">
+			<div class="graphic-text">
+				<strong>京东超市</strong>
+				<p class="graphic-wz" style="color:#FF5959">iPhone 8 4899元限量抢！</p>
+			</div>
+			<div class="graphic-img"><img src="../../assets/5a163dd1Ne09fad4b.jpg" alt="" /><img src="../../assets/5a5d5605Nee8075e6.jpg" alt="" /></div>
+			<!--<span class="graphic-btn">
+				抢6期免息券
+				<i></i>
+			</span>-->
+		</div><div class="real-show f_left">
+			<div class="graphic-text">
+				<strong>爱家</strong>
+				<p class="graphic-wz" style="color:#FF5959">iPhone 8 4899元限量抢！</p>
+			</div>
+			<div class="graphic-img"><img src="../../assets/5a163dd1Ne09fad4b.jpg" alt="" /><img src="../../assets/5a5d5605Nee8075e6.jpg" alt="" /></div>
+			<span class="graphic-btn">
+				打造厨艺大师
+				<i></i>
+			</span>
+		</div>
+		<!--.f_left{
+  float: left;
+}
+.f_right{
+  float: right;
+}-->
 		<!--<mu-list>
 			<template v-for="item in list">
 				<mu-list-item :title="item" />
@@ -142,27 +200,19 @@
 		-webkit-overflow-scrolling: touch;
 		border: 1px solid #d9d9d9;
 		position: relative;
+		&::-webkit-scrollbar {
+			display: none;
+		}
 		.swp {
-			/*position: absolute;*/
 			width: 100%;
 			.swimg {
 				width: 100%;
 				height: 360/@bs;
 			}
-			/*.swp::before,
-			.swp::after {
-				content: "";
-				display: block;
-				visibility: hidden;
-				height: 0;
-				line-height: 0;
-				clear: both;
-			}*/
 		}
 		.center-nav-outer {
 			width: 100%;
 			.center-nav {
-				/*position: absolute;*/
 				width: 100%;
 				background: url(../../assets/nav-bgimg.jpg) no-repeat fixed;
 				background-size: 750/@bs 100%;
@@ -198,8 +248,96 @@
 			}
 		}
 		.scroll-news {
-			/*position: absolute;*/
-			width: 100%;
+			/*position: relative;*/
+			/*width: 100%;
+			height: 30px;
+			line-height: 30px;
+			border: none;
+			overflow: hidden;
+			padding: 0 86/@bs 0 150/@bs;*/
 		}
+		.days-J {
+			width: 100%;
+			a {
+				width: 100%;
+				float: left;
+				img {
+					width: 750/@bs;
+					height: 230/@bs;
+				}
+			}
+		}
+		.tit-img {
+			width: 100%;
+			background-color: #F6F6F6;
+			img {
+				width: 192*2/@bs;
+				height: 70/@bs;
+				margin: 0 auto;
+				display: block;
+			}
+		}
+		.real-show {
+			position: relative;
+			width: 50%;
+			box-sizing: border-box;
+			background-color: #fff;
+			padding: 12/@bs 0 10/@bs 10/@bs;
+			border-bottom: 1PX solid #F5F5F5;
+			border-right: 1PX solid #F5F5F5;
+			.graphic-text {
+				padding-left:10/@bs;
+				strong {
+					font-size: 35/@bs;
+				}
+				p {
+					font-size: 20/@bs;
+				}
+			}
+			.graphic-img {
+				width: 100%;
+				padding: 0 10px;
+				img {
+					float: left;
+					margin-left: 2px;
+					width: 130/@bs;
+					height: 130/@bs;
+				}
+			}
+			.graphic-btn {
+				display: inline-block;
+				text-align: center;
+				padding: 0 3PX;
+				color: #fff;
+				font-size: 28/@bs;
+				height: 28/@bs;
+				line-height: 28/@bs;
+				z-index: 2;
+				position: absolute;
+				left: 0;
+				bottom: 0;
+				background-image: linear-gradient(to right, rgb(255, 110, 0), rgb(255, 86, 68), rgb(255, 74, 125));
+				i {
+					background: url(../../assets/arrow.png) no-repeat;
+					width: 16/@bs;
+					height: 16/@bs;
+					background-size: contain;
+					display: inline-block;
+					vertical-align: top;
+					position: relative;
+					top: 6/@bs;
+					margin: 0 3/@bs 0 7/@bs;
+				}
+			}
+		}
+		/*<div class="real-show f_left">
+			<div class="graphic-text">
+				<strong>玩3C</strong>
+				<p class="graphic-wz" style="color:#FF5959">iPhone 8 4899元限量抢！</p>
+			</div>
+			<div class="graphic-img"><img src="" alt="" /><img src="" alt="" /></div>
+			<span class="graphic-btn">
+				
+			</span>*/
 	}
 </style>
