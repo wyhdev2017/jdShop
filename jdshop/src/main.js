@@ -35,15 +35,16 @@ Axios.defaults.baseURL = 'https://www.easy-mock.com/mock/5a4d85d3e5f9cd651a7fbe7
 //Axios:拦截器操作loadding
 Axios.interceptors.request.use(function (config) {
   //显示图标
-  Indicator.open({
-    text: '加载中...',
-    spinnerType: 'fading-circle'
-  });
+//Indicator.open({
+//  text: '加载中...',
+//  spinnerType: 'fading-circle'
+//});
+  console.log("user")
   return config;
 });
 Axios.interceptors.response.use(function (config) {
   //隐藏图标
-  Indicator.close();
+ // Indicator.close();
   //获取到config中的data，进行加工
   return config;
 });

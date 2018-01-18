@@ -60,7 +60,7 @@
 			width: 100%;
 			/*height: 100%;
 			min-height: 46rem;*/
-			background-color: hotpink;
+			/*background-color: hotpink;*/
 			/*//padding: 5rem 0;*/
 		}
 		.aft {

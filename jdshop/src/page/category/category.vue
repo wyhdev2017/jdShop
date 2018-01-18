@@ -18,112 +18,11 @@
 </template>
 
 <script>
+	import { mapState} from 'vuex';
 	export default {
 		data() {
 			return {
 				active: false,
-				categories: [{
-						id: '0',
-						name: '热门推荐',
-						urlPath: 'hotpage',
-						active:true
-					},
-					{
-						id: '1',
-						name: '京东超市',
-						urlPath: 'supermarket'
-					},
-					{
-						id: '2',
-						name: '国际名牌',
-						urlPath: 'hotpage'
-					},
-					{
-						id: '3',
-						name: '奢侈品',
-						urlPath: 'hotpage'
-					},
-					{
-						id: '4',
-						name: '全球购',
-						urlPath: 'hotpage'
-					},
-					{
-						id: '5',
-						name: '男装',
-						urlPath: 'hotpage'
-					},
-					{
-						id: '6',
-						name: '女装',
-						urlPath: 'hotpage'
-					},
-					{
-						id: '7',
-						name: '男鞋',
-						urlPath: 'hotpage'
-					},
-					{
-						id: '8',
-						name: '女鞋',
-						urlPath: 'hotpage'
-					},
-					{
-						id: '9',
-						name: '内衣配饰',
-						urlPath: 'hotpage'
-					},
-					{
-						id: '10',
-						name: '箱包手袋',
-						urlPath: 'hotpage'
-					},
-					{
-						id: '11',
-						name: '没装个护',
-						urlPath: 'hotpage'
-					},
-					{
-						id: '12',
-						name: '钟表珠宝',
-						urlPath: 'hotpage'
-					},
-					{
-						id: '13',
-						name: '手机数码',
-						urlPath: 'hotpage'
-					},
-					{
-						id: '14',
-						name: '电脑办公',
-						urlPath: 'hotpage'
-					},
-					{
-						id: '15',
-						name: '家用电器',
-						urlPath: 'hotpage'
-					},
-					{
-						id: '16',
-						name: '食品生鲜',
-						urlPath: 'hotpage'
-					},
-					{
-						id: '17',
-						name: '酒水饮料',
-						urlPath: 'hotpage'
-					},
-					{
-						id: '18',
-						name: '母婴童装',
-						urlPath: 'hotpage'
-					},
-					{
-						id: '19',
-						name: '玩具乐器',
-						urlPath: 'hotpage'
-					}
-				]
 			}
 		},
 		methods: {
@@ -134,22 +33,22 @@
 					});
 					this.$set(item, 'active', true)
 					this.$refs.culist.style.transform = "translate3d(0,0px,0)";
-//					let moveLength=0;
-//					if(index<this.categories.length-11){
-//						moveLength=-index*50;
-//					}
-//					console.log(moveLength)
-//					this.$refs.culist.style.transform = "translate3d(0,"+moveLength+"px,0)";
+					//					let moveLength=0;
+					//					if(index<this.categories.length-11){
+					//						moveLength=-index*50;
+					//					}
+					//					console.log(moveLength)
+					//					this.$refs.culist.style.transform = "translate3d(0,"+moveLength+"px,0)";
 				});
-				
-			}
+			},
 		},
 		computed: {
-
+			...mapState(["categories"]),
 		},
 		mounted() {
 
-		}
+		},
+		
 	}
 </script>
 
@@ -178,12 +77,12 @@
 						background: #fff;
 						text-align: center;
 						position: relative;
-						a{
+						a {
 							color: #808080;
 						}
 						&.active {
 							background-color: #f3f5f7;
-							a{
+							a {
 								color: #f23030;
 							}
 						}
