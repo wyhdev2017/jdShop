@@ -215,7 +215,7 @@
 			.center-nav {
 				width: 100%;
 				background: url(../../assets/nav-bgimg.jpg) no-repeat fixed;
-				background-size: 750/@bs 100%;
+				background-size: 100% 100%;
 				.center-nav-items {
 					width: 100%;
 					box-sizing: border-box;
@@ -262,8 +262,8 @@
 				width: 100%;
 				float: left;
 				img {
-					width: 750/@bs;
-					height: 230/@bs;
+					width: 100%;
+					
 				}
 			}
 		}
