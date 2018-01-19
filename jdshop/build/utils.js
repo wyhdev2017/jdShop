@@ -48,7 +48,7 @@ exports.cssLoaders = function (options) {
       return ExtractTextPlugin.extract({
         use: loaders,
         fallback: 'vue-style-loader',
-        publicPath:'../../'
+        publicPath:'../../'//后加的 解决图片打包到img下找不的路径问题
       })
     } else {
       return ['vue-style-loader'].concat(loaders)
