@@ -171,17 +171,10 @@
 		},
 		created() {
 			this.$axios.all([this.getswiper()]).then(this.$axios.spread((res) => {
-				console.log(res)
 				this.img = res.data.data.img;
 			})).catch(res => {
 				console.log("请求失败了Recommend");
 			});
-			//			this.$axios.get("https://www.easy-mock.com/mock/5a4d85d3e5f9cd651a7fbe77/test/swipe").then(res => {
-			//				console.log(res)
-			//				this.imgUrls = res.data.hotComments;;
-			//			}).catch(res => {
-			//				console.log("sss");
-			//			})
 		},
 		computed: {
 			//...mapState(["topimgs"]),

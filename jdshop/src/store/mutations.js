@@ -5,6 +5,9 @@ export default {
 	changeTopShow(state,data){
 		state.topShow=data;
 	},
+	changeotherHeaderBarTitle(state,data){
+		state.otherHeaderBarTitle=data;
+	},
 	
 	/*************************结束***/
   // 设置home首页的bannar数据

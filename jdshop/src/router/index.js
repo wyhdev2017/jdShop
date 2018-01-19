@@ -20,11 +20,17 @@ export default new Router({
 		{
 			path: '/home',
 			name: 'home',
-			component: Home
+			component: Home,
+			meta: {
+				otherhead: false
+			}
 		}, {
 			path: '/category',
 			name: 'category',
 			component: category,
+			meta: {
+				otherhead: true
+			},
 			redirect: '/category/hotpage', //定位到首页时路由自动切换到首页的推荐页面
 			children: [{ //推荐
 					name: 'hotpage',
@@ -40,15 +46,24 @@ export default new Router({
 		}, {
 			path: '/discover',
 			name: 'discover',
-			component: discover
+			component: discover,
+			meta: {
+				otherhead: true
+			}
 		}, {
 			path: '/shoppingcart',
 			name: 'shoppingcart',
-			component: shoppingcart
+			component: shoppingcart,
+			meta: {
+				otherhead: true
+			}
 		}, {
 			path: '/mine',
 			name: 'mine',
-			component: mine
+			component: mine,
+			meta: {
+				otherhead: true
+			}
 		}
 	]
 })

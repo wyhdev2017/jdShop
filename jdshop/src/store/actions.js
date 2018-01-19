@@ -9,6 +9,9 @@ export default {
 	changeTopShow({commit},flag){
 		commit("changeTopShow",flag)
 	},
+	changeotherHeaderBarTitle({commit},flag){
+		commit("changeotherHeaderBarTitle",flag)
+	},
 	/*******************************************************结束**/
   // 设置bannar
   setBannar ({commit}) {

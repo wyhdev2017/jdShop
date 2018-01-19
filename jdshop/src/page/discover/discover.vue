@@ -12,7 +12,7 @@
 			}
 		},
 		mounted() {
-			console.log(this.$el);
+			//console.log(this.$el);
 			this.scroller = this.$el
 		},
 		methods: {
@@ -39,12 +39,12 @@
 		},
 		created() {
 			this.$axios.all([this.getSwipe(), this.getProducts()]).then(this.$axios.spread((swipe, pro) => {
-				console.log(swipe.data.data.img);
+				//console.log(swipe.data.data.img);
 
 				//this.imgUrls = pro.data.hotComments.user;
 				this.imgUrls = swipe.data.data.img;
 				this.products = pro.data.products;
-				console.log(this.products);
+				//console.log(this.products);
 			})).catch(res => {
 				console.log("请求失败了Recommend");
 			});

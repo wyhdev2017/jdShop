@@ -1,5 +1,6 @@
 <template>
 	<div class="sn_layout" @mousewheel="scrollToTop">
+		<other-header-bar class="ahead" v-show='!headerBarShow'></other-header-bar>
 		<header-bar class="ahead" v-show='headerBarShow'></header-bar>
 		<router-view class="abody" id="myData"></router-view>
 		<footer-bar class="aft"></footer-bar>
@@ -9,6 +10,7 @@
 <script>
 	import FooterBar from 'components/footbar'
 	import HeaderBar from 'components/headbar.vue'
+	import OtherHeaderBar from 'components/otherHeaderbar.vue'
 	import { mapState, mapActions, mapGetters } from 'vuex';
 	export default {
 		data() {
@@ -16,7 +18,8 @@
 		},
 		components: {
 			FooterBar,
-			HeaderBar
+			HeaderBar,
+			OtherHeaderBar
 		},
 		methods: {
 			...mapActions(['changeTopShow', 'reduceCarNum']),

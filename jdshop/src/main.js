@@ -39,7 +39,6 @@ Axios.interceptors.request.use(function (config) {
 //  text: '加载中...',
 //  spinnerType: 'fading-circle'
 //});
-  console.log("user")
   return config;
 });
 Axios.interceptors.response.use(function (config) {
@@ -51,11 +50,13 @@ Axios.interceptors.response.use(function (config) {
 // 导航钩子控制headerBarShow的显示隐藏
 router.beforeEach((to, from, next) => {
   NProgress.start()
-if (to.path === '/' || to.path === '/home'|| to.path.indexOf('/category') != -1) {
+  //console.log(from.path+"  ;  "+from.meta)
+if (to.path === '/' || to.path === '/home') {
     store.state.headerBarShow = true
 } else {
     store.state.headerBarShow = false
 }
+
   next()
 })
 router.afterEach((to, from) => {

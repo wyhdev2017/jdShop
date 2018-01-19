@@ -25,6 +25,7 @@ export default {
   topShow:false,
 	//顶部栏是否显示
   headerBarShow:true,
+  otherHeaderBarTitle:"",
   //顶部滚动条
   
 //分类页面导航菜单
