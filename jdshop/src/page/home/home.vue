@@ -3,7 +3,7 @@
 		<div class="clearfix swp">
 			<swiper :options="swiperOption" class="clearfix">
 				<swiper-slide v-for="(item,index) in img" :key="index" class="clearfix">
-					<img :src="item.url" class="swimg " />
+					<img :src="item.img-Base64" class="swimg " />
 				</swiper-slide>
 
 				<div class="swiper-pagination" slot="pagination"></div>
@@ -172,6 +172,7 @@
 		created() {
 			this.$axios.all([this.getswiper()]).then(this.$axios.spread((res) => {
 				this.img = res.data.data.img;
+				console.log(this.img)
 			})).catch(res => {
 				console.log("请求失败了Recommend");
 			});
